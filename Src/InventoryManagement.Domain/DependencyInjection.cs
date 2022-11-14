@@ -9,7 +9,6 @@ public static class DependencyInjeciton
     public static IServiceCollection AddDomain(this IServiceCollection services)
     {
         services.AddScoped<IProductService, ProductService>();
-        //services.AddScoped<IProductRepository, ProductService>();
 
         return services;
     }

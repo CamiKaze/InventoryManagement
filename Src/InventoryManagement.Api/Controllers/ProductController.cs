@@ -1,8 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using InventoryManagement.Domain.Models.Abstract;
-using InventoryManagement.Infrastructure.Data;
 using InventoryManagement.Domain.Models;
-using System.Threading.Tasks;
 
 namespace InventoryManagement.Api.Controllers;
 
@@ -37,11 +35,6 @@ public class ProductController : ControllerBase
         Enum.TryParse<Status>(ProductStatus, out enumvalue);
         
         var enumIndex = (int)enumvalue;
-
-        // if(!Enum.TryParse<Status>(ProductStatus, out enumvalue))
-        // {
-        //     return NotFound();
-        // }
 
         if (enumIndex > 3 || enumIndex < 1)
           return NotFound();

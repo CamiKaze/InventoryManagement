@@ -1,5 +1,3 @@
-using InventoryManagement.Domain.Models;
-
 namespace InventoryManagement.Domain.Models.Abstract;
 
 public interface IProductRepository
@@ -10,11 +8,6 @@ public interface IProductRepository
     Task<Product> Update(Product product);
 
     IEnumerable<Product> GetAll();
-    //Product Get(int Id);
-    
     void Delete(int id);
-    
-    //void Create(Product product);
-    
     bool SaveChanges();
 }

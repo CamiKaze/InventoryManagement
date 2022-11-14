@@ -4,7 +4,6 @@ using InventoryManagement.Domain.Models.Abstract;
 namespace InventoryManagement.Domain.Services;
 
 public class ProductService : IProductService
-//public class ProductService : IProductRepository
 
 {
     private readonly IProductRepository _productRepository;
@@ -27,11 +26,6 @@ public class ProductService : IProductService
         return result;
     }
 
-
-
-
-
-
      public async Task<Product> Add(Product product)
     {
         var result = await _productRepository.Create(product);
@@ -46,15 +40,6 @@ public class ProductService : IProductService
         return result;
     }
 
-
-
-
-
-
-
-
-
-
     public Task<int> CountProducts()
     {
         throw new NotImplementedException();
@@ -65,11 +50,6 @@ public class ProductService : IProductService
         throw new NotImplementedException();
     }
 
-    
-
-
-
-
     public IEnumerable<Product> GetProducts()
     {
         throw new NotImplementedException();
@@ -79,22 +59,4 @@ public class ProductService : IProductService
     {
         throw new NotImplementedException();
     }
-
-
-    // public Task<int> CountProducts()
-    // {
-    //     throw new NotImplementedException();
-    // }
-
-    // public Product Get(int Id)
-    // {
-    //     var result = _productRepository.Get(Id);
-
-    //     return result;
-    // }
-
-    // public IEnumerable<Product> GetProducts()
-    // {
-    //     throw new NotImplementedException();
-    // }
 }
